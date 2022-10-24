@@ -10,7 +10,6 @@ import {
   Star1,
 } from "iconsax-react";
 import React from "react";
-import { NavLink } from "react-router-dom";
 import icon from "../../../assets/mvx.svg";
 
 const items = [
@@ -65,7 +64,7 @@ const itms = [
 function SideNav({ className }) {
   return (
     <nav
-      className={`bg-purple-100 h-screen lg:grid grid-rows-[1.67fr_max-content_1fr_max-content_2.22fr_max-content_2.52fr_max-content_1.37fr] ${className}`}
+      className={`bg-purple-100 h-screen lg:grid grid-rows-[1.67fr_max-content_1fr_max-content_2.22fr_max-content_2.52fr_max-content_1.37fr] before:absolute before:w-8 before:h-8 before:-right-3 before:bg-black-10 before:top-[10%] before:rounded-full before:content-['<'] before:text-purple-100 before:text-[1.25rem] before:flex before:items-center before:justify-center ${className}`}
     >
       <img
         src={icon}
@@ -80,11 +79,17 @@ function SideNav({ className }) {
                 id === 0
                   ? "relative before:absolute before:w-full before:inset-0 before:bg-purple-10 before:opacity-20 after:absolute after:w-2 after:h-full after:bg-yellow-100 after:top-0 after:left-0"
                   : "border-b border-purple-90"
-              }`}
+              }
+              ${
+                id === 1 || id === 4
+                  ? "relative before:absolute before:bg-yellow-100 before:top-1/2 before:-translate-y-1/2 before:right-7 before:z-10 before:w-6 before:h-6 before:rounded-md before:text-purple-100 before:text-xs before:flex before:justify-center before:items-center before:font-medium"
+                  : ""
+              }
+              ${id === 1 ? "before:content-['13']" : ""}
+              ${id === 4 ? "before:content-['23']" : ""}
+              `}
             >
-              {/* <img src={link} alt="" /> */}
               {icons}
-              {/* <Calendar size="32" color="#ffffff" variant="Bold" /> */}
               <div className="text-lg leading-6 font-medium">{name}</div>
             </div>
           </li>
