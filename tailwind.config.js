@@ -2,11 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    
     extend: {
       colors: {
         green: {
-
           50: "#E2FAE9",
           100: "#39BA62",
         },
@@ -43,6 +41,7 @@ module.exports = {
         200: ["10px", "13.02px"],
         250: ["9px", "12.09px"],
         300: ["17px", "22.13px"],
+        350: ["13px", "16.97px"],
         400: ["32px", "42px"],
       },
       boxShadow: {
@@ -52,6 +51,9 @@ module.exports = {
           "0px 4.352644443511963px 10.881610870361328px 0px #F56C2233",
         calendergreen:
           "box-shadow: 0px 4.352644443511963px 10.881610870361328px 0px #39BA6233",
+        mobilecta:
+          "0px 2.089552164077759px 5.223880290985107px 1.0447760820388794px #6A35FF33",
+        dahboardpanel: "0px -10px 30px 0px #0000000D",
       },
       padding: {
         5.5: "22px",
@@ -59,14 +61,19 @@ module.exports = {
       gap: {
         5.5: "22px",
       },
-      screens:{
-        bigger:"1632px",
-        big:"1533px",
-        albig:"1288px",
-        medium:"1160px",
-        mid:"1096px",
-        short:"1080px",
-      }
+      screens: {
+        bigger: "1632px",
+        big: "1533px",
+        albig: "1288px",
+        medium: "1160px",
+        mid: "1096px",
+        short: "1080px",
+        nshorty: "890px",
+        fshorty: "830px",
+        kshorty: "554px",
+        mini: "516px",
+        vmini: "458px",
+      },
     },
   },
   plugins: [],

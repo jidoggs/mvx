@@ -65,7 +65,7 @@ const itms = [
 function SideNav({ className }) {
   return (
     <nav
-      className={`bg-purple-100 h-screen grid grid-rows-[1.67fr_max-content_1fr_max-content_2.22fr_max-content_2.52fr_max-content_1.37fr] ${className}`}
+      className={`bg-purple-100 h-screen lg:grid grid-rows-[1.67fr_max-content_1fr_max-content_2.22fr_max-content_2.52fr_max-content_1.37fr] ${className}`}
     >
       <img
         src={icon}

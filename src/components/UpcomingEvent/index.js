@@ -1,7 +1,7 @@
 import React from "react";
 import UpcomingEventCard from "../Cards/UpcomingEvent";
 import { BsPlusSquare } from "react-icons/bs";
-import { Flag, TimerStart } from "iconsax-react";
+import { AddSquare, Flag, TimerStart } from "iconsax-react";
 
 const events = [
   {
@@ -63,7 +63,7 @@ function UpcomingEvent({ className }) {
           </p>
         </div>
         <button className="flex items-center gap-x-1.5 py-4 px-6 text-150 bg-purple-100 rounded-[54px] text-white">
-          <BsPlusSquare className="rounded-sm" /> <span>Add new</span>
+        <AddSquare size="16" color="#ffffff" variant="Outline"/> <span>Add new</span>
         </button>
       </header>
       <div className="flex flex-col gap-y-2.5">
@@ -71,7 +71,7 @@ function UpcomingEvent({ className }) {
           {event_types.map(({ icon, name }) => (
             <div
               key={name}
-              className={`py-3.5 px-5 rounded-lg font-medium text-100 flex-1 flex items-center justify-center gap-x-2.5 ${
+              className={`py-3.5 px-5 rounded-lg font-medium text-xs vmin:text-100 flex-1 flex items-center justify-center gap-x-2.5 ${
                 icon === null ? "bg-purple-20 text-purple-100" : ""
               } ${name === "Classes" ? "bg-orange-50 text-orange-100" : ""} ${
                 name === "Events" ? "bg-green-50 text-green-100" : ""
@@ -82,7 +82,7 @@ function UpcomingEvent({ className }) {
             </div>
           ))}
         </div>
-        <div className="grid medium:grid-cols-1 short:grid-cols-2 grid-cols-1 gap-2.5 ">
+        <div className="grid medium:grid-cols-1 short:grid-cols-2 lg:grid-cols-1 nshorty:grid-cols-2 grid-cols-1 gap-2.5 ">
           {events.map(
             ({ activity, date_time, facilitator, location, title }) => (
               <UpcomingEventCard

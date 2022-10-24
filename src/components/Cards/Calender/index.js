@@ -1,15 +1,23 @@
+import { Flag, TimerStart } from "iconsax-react";
 import React from "react";
-import { RiTimerFill } from "react-icons/ri";
 
-function CalenderCard({ className }) {
+function CalenderCard({ className, title, time, activity }) {
   return (
     <div
-      className={`border border-orange-100 rounded-xl bg-orange-50 text-orange-100 py-2 pr-4 pl-3 h-[58px] shadow-calenderorange w-[263px] ${className}`}
+      className={`border ${
+        activity === "class"
+          ? "border-orange-100 bg-orange-50 text-orange-100 shadow-calenderorange"
+          : "border-green-100 bg-green-50 text-green-100 shadow-calendergreen"
+      }  rounded-xl  py-2 pr-4 pl-3 h-[58px]  w-[263px] ${className}`}
     >
-      <h5 className="text-xs font-bold">Accounting/Personal Finance Class </h5>
+      <h5 className="text-xs font-bold">{title}</h5>
       <div className="flex flex-col justify-center">
-        <p className="font-medium text-200">8:00 AM - 9:00 AM</p>
-        <RiTimerFill className="self-end" size={16} />
+        <p className="font-medium text-200">{time}</p>
+        {activity === "class" ? (
+          <TimerStart className="self-end" size="16" color="#F56C22" variant="Bold" />
+        ) : (
+          <Flag size="16" className="self-end" color="#39BA62" variant="Bold" />
+        )}
       </div>
     </div>
   );
