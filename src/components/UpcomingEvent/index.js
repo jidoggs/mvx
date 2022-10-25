@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import UpcomingEventCard from "../Cards/UpcomingEvent";
 import { BsPlusSquare } from "react-icons/bs";
 import { AddSquare, Flag, TimerStart } from "iconsax-react";
+import { ModalContex } from "../../App";
 
 const events = [
   {
@@ -50,6 +51,7 @@ const event_types = [
 ];
 
 function UpcomingEvent({ className }) {
+  const [modalHandler] = useContext(ModalContex);
   return (
     <section
       className={`big:max-w-[402px] flex flex-col gap-y-10 ${className}`}
@@ -62,8 +64,12 @@ function UpcomingEvent({ className }) {
             <span className="underline">See all</span>
           </p>
         </div>
-        <button className="flex items-center gap-x-1.5 py-4 px-6 text-150 bg-purple-100 rounded-[54px] text-white">
-        <AddSquare size="16" color="#ffffff" variant="Outline"/> <span>Add new</span>
+        <button
+          onClick={modalHandler}
+          className="flex items-center gap-x-1.5 py-4 px-6 text-150 bg-purple-100 rounded-[54px] text-white"
+        >
+          <AddSquare size="16" color="#ffffff" variant="Outline" />{" "}
+          <span>Add new</span>
         </button>
       </header>
       <div className="flex flex-col gap-y-2.5">

@@ -16,48 +16,48 @@ const items = [
   {
     name: "Dashboard",
     link: "/dashboard",
-    icon: <Element3 size="32" color="#ffffff" variant="Bold" />,
+    icon: <Element3 size="20" color="#ffffff" variant="Bold" />,
   },
   {
     name: "Calender",
     link: "/calender",
-    icon: <Calendar size="32" color="#ffffff" variant="Bold" />,
+    icon: <Calendar size="20" color="#ffffff" variant="Bold" />,
   },
   {
     name: "Live class",
     link: "/class",
-    icon: <MonitorRecorder size="32" color="#ffffff" variant="Bold" />,
+    icon: <MonitorRecorder size="20" color="#ffffff" variant="Bold" />,
   },
   {
     name: "Courses",
     link: "/courses",
-    icon: <Book1 size="32" color="#ffffff" variant="Bold" />,
+    icon: <Book1 size="20" color="#ffffff" variant="Bold" />,
   },
   {
     name: "Messages",
     link: "/messages",
-    icon: <Sms size="32" color="#ffffff" variant="Bold" />,
+    icon: <Sms size="20" color="#ffffff" variant="Bold" />,
   },
   {
     name: "Groups",
     link: "/groups",
-    icon: <Profile2User size="32" color="#ffffff" variant="Bold" />,
+    icon: <Profile2User size="20" color="#ffffff" variant="Bold" />,
   },
   {
     name: "Grades",
     link: "/grades",
-    icon: <Star1 size="32" color="#ffffff" variant="Bold" />,
+    icon: <Star1 size="20" color="#ffffff" variant="Bold" />,
   },
 ];
 
 const itms = [
   {
     name: "Settings",
-    icon: <Setting2 size="32" color="#ffffff" variant="Bold" />,
+    icon: <Setting2 size="20" color="#ffffff" variant="Bold" />,
   },
   {
     name: "Logout",
-    icon: <LoginCurve size="32" color="#ffffff" variant="Bold" />,
+    icon: <LoginCurve size="20" color="#ffffff" variant="Bold" />,
   },
 ];
 

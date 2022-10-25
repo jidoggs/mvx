@@ -1,15 +1,21 @@
-import LongCalender from "./components/Calender";
-import ShortCalender from "./components/Calender/ShortCalender";
-import CalenderType from "./components/CalenderType";
+import { createContext, useCallback, useState } from "react";
 import Layout from "./components/Layout";
-import Header from "./components/Layout/Header";
-import SideNav from "./components/Layout/SideNav";
-import Tracker from "./components/Tracker";
-import UpcomingEvent from "./components/UpcomingEvent";
+import Modal from "./components/Modal";
+
+export const ModalContex = createContext(null);
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
+  const showModalHandler = useCallback(() => setShowModal((prev) => !prev), []);
+
   return (
-   <Layout />
+    <div className="h-screen">
+      <ModalContex.Provider value={[showModalHandler]}>
+        {showModal ? <Modal /> : null}
+        <Layout />
+      </ModalContex.Provider>
+    </div>
   );
 }
 

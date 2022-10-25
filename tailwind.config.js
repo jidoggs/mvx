@@ -13,6 +13,7 @@ module.exports = {
           100: "#F56C22",
         },
         gray: {
+          10: "#F4F4F4",
           20: "#A0A6B1",
           50: "#D3D3D3",
           60: "#6C6C6C",
@@ -58,6 +59,7 @@ module.exports = {
         mobilecta:
           "0px 2.089552164077759px 5.223880290985107px 1.0447760820388794px #6A35FF33",
         dahboardpanel: "0px -10px 30px 0px #0000000D",
+        modalinput: "0px 4px 26px 0px #0000000D",
       },
       padding: {
         5.5: "22px",
@@ -74,6 +76,7 @@ module.exports = {
         short: "1080px",
         nshorty: "890px",
         fshorty: "830px",
+        pshorty:"692px",
         kshorty: "554px",
         mini: "516px",
         vmini: "458px",
