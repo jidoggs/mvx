@@ -17,6 +17,7 @@ module.exports = {
           20: "#A0A6B1",
           50: "#D3D3D3",
           60: "#6C6C6C",
+          100: "#E9E9E9",
         },
         black: {
           10: "#F9FAFC",
@@ -67,6 +68,10 @@ module.exports = {
       gap: {
         5.5: "22px",
       },
+      backgroundImage: {
+        dropdownselected:
+          "linear-gradient(0deg, #E9E9E9, #E9E9E9), linear-gradient(0deg, #F6F6F6, #F6F6F6)",
+      },
       screens: {
         bigger: "1632px",
         big: "1533px",
@@ -76,7 +81,7 @@ module.exports = {
         short: "1080px",
         nshorty: "890px",
         fshorty: "830px",
-        pshorty:"692px",
+        pshorty: "692px",
         kshorty: "554px",
         mini: "516px",
         vmini: "458px",

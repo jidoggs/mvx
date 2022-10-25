@@ -24,7 +24,7 @@ function Header({ className }) {
           id="search"
         />
         <button className="absolute top-1/2 -translate-y-1/2 right-6 text-purple-80 ">
-          <SearchNormal1 size="24" color="#6A35FF" variant="Outline" />
+          <SearchNormal1 size="16" color="#6A35FF" variant="Outline" />
         </button>
       </form>
       <div className="hidden albig:flex items-center gap-x-2.5 col-start-10 col-end-12 justify-self-center row-start-1">

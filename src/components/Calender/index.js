@@ -1,5 +1,6 @@
 import React from "react";
 import CalenderCard from "../Cards/Calender";
+import { Select, SelectItem } from "../CustomSelect";
 
 const data = [
   {
@@ -67,9 +68,13 @@ function LongCalender({ className }) {
         </h3>
         <div className="flex items-center gap-x-4 text-xs font-medium">
           <p className="text-gray-20">Sort by:</p>
-          <div className="py-2.5 pr-14 pl-4 text-gray-60 border border-gray-50 rounded ">
+          {/* <div className="py-2.5 pr-14 pl-4 text-gray-60 border border-gray-50 rounded ">
             Events
-          </div>
+          </div> */}
+          <Select value="Events" className="py-2.5 pl-4 pr-1 w-[112px] text-gray-60 border border-gray-50 rounded flex items-center justify-between">
+            <SelectItem>Classes</SelectItem>
+            <SelectItem>Reminders</SelectItem>
+          </Select>
         </div>
       </header>
       <nav className="flex items-center justify-between mini:pt-5 mini:pb-4 mini:pr-9 mini:pl-11 pt-6 pr-4 pb-5 pl-5">
