@@ -114,6 +114,3 @@ function SideNav({ className }) {
 }
 
 export default SideNav;
-
-const goat = ["90", "54", "120", "136", "74"];
-const goats = ["1.67", "54", "2.22", "2.52", "1.37"];

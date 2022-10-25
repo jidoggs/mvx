@@ -1,6 +1,5 @@
-import { Flag, TimerStart } from "iconsax-react";
+import { Flag, Location, TimerStart } from "iconsax-react";
 import React from "react";
-import { HiLocationMarker } from "react-icons/hi";
 
 function UpcomingEventCard({ facilitator, date_time, title, location, tag }) {
   return (
@@ -18,7 +17,12 @@ function UpcomingEventCard({ facilitator, date_time, title, location, tag }) {
         } font-medium`}
       >
         <div className="text-50 flex items-center gap-x-1">
-          <HiLocationMarker /> <span>{location}</span>
+          <Location
+            size="8"
+            color={`${tag === "class" ? "#F56C22" : "#39BA62"}`}
+            variant="Bold"
+          />{" "}
+          <span>{location}</span>
         </div>
         {tag === "class" ? (
           <TimerStart size="16" color="#F56C22" variant="Bold" />

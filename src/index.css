@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    
+    @font-face {
+      font-family: "CerealSemiBold";
+      font-weight: 700;
+      src: local("CerealSemiBold"),
+        url(./assets/font/AirbnbCereal_W_Bd.otf) format("opentype");
+   
+    }
+  
+    @font-face {
+      font-family: "CerealMedium";
+      font-weight: 500;
+      src: local("CerealMedium"),
+        url(./assets/font/AirbnbCereal_W_Md.otf) format("opentype");
+    }
+   
+  
+    html {
+      font-family: CerealMedium;
+    }
+    
+  }

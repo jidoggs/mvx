@@ -66,7 +66,7 @@ function LongCalender({ className }) {
           Calender
         </h3>
         <div className="flex items-center gap-x-4 text-xs font-medium">
-          <p>Sort by:</p>
+          <p className="text-gray-20">Sort by:</p>
           <div className="py-2.5 pr-14 pl-4 text-gray-60 border border-gray-50 rounded ">
             Events
           </div>

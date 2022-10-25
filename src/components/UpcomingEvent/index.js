@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import UpcomingEventCard from "../Cards/UpcomingEvent";
-import { BsPlusSquare } from "react-icons/bs";
 import { AddSquare, Flag, TimerStart } from "iconsax-react";
 import { ModalContex } from "../../App";
 

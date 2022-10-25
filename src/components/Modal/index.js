@@ -1,4 +1,4 @@
-import { Clock, Information, Profile2User } from "iconsax-react";
+import { Add, Clock, Information, Profile2User } from "iconsax-react";
 import React, { useContext } from "react";
 import { ModalContex } from "../../App";
 import BackDrop from "./BackDrop";
@@ -13,10 +13,16 @@ function Modal() {
     showModalHandler();
   };
   return (
-    <BackDrop className="short:w-[952px] pshorty:w-[600px] mini:w-[464px] w-96 h-full max-h-[846px] mini:min-h-[660px] min-h-[600px]" handleClose={showModalHandler}>
+    <BackDrop
+      className="short:w-[952px] pshorty:w-[600px] mini:w-[464px] w-96 h-full max-h-[846px] mini:min-h-[660px] min-h-[600px]"
+      handleClose={showModalHandler}
+    >
       <div className="bg-white h-full max-h-[846px] min-h-[660px] w-full pb-12  relative rounded-[10px] overflow-hidden">
-        <header className="bg-purple-210 pb-20 text-center z-[-1] bg-purple-100 pt-12 text-white  ">
+        <header className="bg-purple-210 pb-20 text-center relative bg-purple-100 pt-12 text-white  ">
           <h2 className="text-3xl font-bold">Add New Events</h2>
+          <button onClick={showModalHandler} className="absolute top-3 right-6 rotate-45">
+            <Add size="50" className="" color="#ffffff" variant="Outline" />
+          </button>
         </header>
         <form
           className=" absolute left-0 right-0 pshorty:px-12 px-6 top-32 "
@@ -148,28 +154,26 @@ function Modal() {
                   </div>
                 </div>
               </div>
-              <div className="flex-1">
-                <div className="flex flex-col gap-y-4 h-full">
-                  <label
-                    className="inline-flex items-center gap-x-1.5 text-base leading-5 text-gray-60"
-                    htmlFor="title"
-                  >
-                    Description/instructions
-                    <Information size="12" color="#6A35FF" variant="Outline" />
-                  </label>
-                  <textarea
-                    className="p-7 border rounded flex-1 placeholder:text-gray-50 border-gray-20 placeholder:text-xs"
-                    placeholder="Write a summary and any details your should know about the event "
-                    name=""
-                    id=""
-                    cols="30"
-                    rows="10"
-                  ></textarea>
-                </div>
+              <div className="flex-1  flex flex-col gap-y-4 h-full">
+                <label
+                  className="inline-flex items-center gap-x-1.5 text-base leading-5 text-gray-60"
+                  htmlFor="title"
+                >
+                  Description/instructions
+                  <Information size="12" color="#6A35FF" variant="Outline" />
+                </label>
+                <textarea
+                  className="p-7 border rounded flex-1 placeholder:text-gray-50 border-gray-20 placeholder:text-xs"
+                  placeholder="Write a summary and any details your should know about the event "
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                ></textarea>
               </div>
             </div>
             <div className="flex items-center gap-x-2.5 justify-end">
-              <button className="py-4 px-10 bg-gray-10 text-gray-60 rounded-md font-medium text-base leading-none">
+              <button type="button" className="py-4 px-10 bg-gray-10 text-gray-60 rounded-md font-medium text-base leading-none">
                 Cancel
               </button>
               <button className="py-4 px-7 bg-purple-100 text-white rounded-md font-medium text-base leading-none">
